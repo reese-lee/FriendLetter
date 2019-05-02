@@ -25,6 +25,7 @@ namespace FriendLetter
 
     public void Configure(IApplicationBuilder app)
     {
+      app.UseStaticFiles(); //THIS IS NEW
       app.UseMvc(routes =>
       {
         routes.MapRoute(
@@ -35,6 +36,6 @@ namespace FriendLetter
         {
           await context.Response.WriteAsync("Hello World!");
           });
-        }
       }
     }
+  }
